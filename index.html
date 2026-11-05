@@ -1,55 +1,516 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>3301 - Seek The Path</title><link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHBhdGggZmlsbD0iIzAwZmYwMCIgZD0iTTE2IDIgTDEyIDEwIEwxMiAyNCBMMTYgMzAgTDIwIDI0IEwyMCAxMCBaIi8+PHBhdGggZmlsbD0iIzAwZmYwMCIgZmlsbC1vcGFjaXR5PSIwLjYiIGQ9Ik0xNCA4IEwyIDE4IEw2IDI2IEwxMiAxNiBaIi8+PHBhdGggZmlsbD0iIzAwZmYwMCIgZmlsbC1vcGFjaXR5PSIwLjYiIGQ9Ik0xOCA4IEwzMCAxOCBMMjYgMjYgTDIwIDE2IFoiLz48Y2lyY2xlIGN4PSIxMyIgY3k9IjYiIHI9IjEuNSIgZmlsbD0iIzAwZmYwMCIvPjxjaXJjbGUgY3g9IjE5IiBjeT0iNiIgcj0iMS41IiBmaWxsPSIjMDBmZjAwIi8+PC9zdmc+" type="image/svg+xml"><script src="https://cdn.tailwindcss.com"></script><link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=VT323&display=swap" rel="stylesheet"><style>body{background-color:#000000;color:#33ff33;font-family:'Courier Prime',monospace;overflow-x:hidden;margin:0;padding:0}.scanlines{position:fixed;top:0;left:0;width:100vw;height:100vh;background:linear-gradient(to bottom,rgba(255,255,255,0),rgba(255,255,255,0) 50%,rgba(0,0,0,0.1) 50%,rgba(0,0,0,0.1));background-size:100% 4px;pointer-events:none;z-index:50;opacity:0.6}.crt-flicker{animation:flicker 0.15s infinite}@keyframes flicker{0%{opacity:0.95}50%{opacity:0.85}100%{opacity:0.95}}.glitch-text{position:relative;display:inline-block}.glitch-text::before,.glitch-text::after{content:attr(data-text);position:absolute;top:0;left:0;width:100%;height:100%;opacity:0.8}.glitch-text::before{left:2px;text-shadow:-1px 0 red;animation:glitch-anim-1 2s infinite linear alternate-reverse}.glitch-text::after{left:-2px;text-shadow:-1px 0 blue;animation:glitch-anim-2 3s infinite linear alternate-reverse}@keyframes glitch-anim-1{0%{clip-path:inset(20% 0 80% 0)}20%{clip-path:inset(60% 0 10% 0)}40%{clip-path:inset(40% 0 50% 0)}60%{clip-path:inset(80% 0 5% 0)}80%{clip-path:inset(10% 0 70% 0)}100%{clip-path:inset(30% 0 20% 0)}}@keyframes glitch-anim-2{0%{clip-path:inset(10% 0 60% 0)}20%{clip-path:inset(80% 0 5% 0)}40%{clip-path:inset(30% 0 20% 0)}60%{clip-path:inset(70% 0 10% 0)}80%{clip-path:inset(20% 0 50% 0)}100%{clip-path:inset(50% 0 30% 0)}}.hidden-stage{display:none;opacity:0;transition:opacity 1s ease-in-out}.active-stage{display:flex;opacity:1;animation:fadeIn 2s forwards}@keyframes fadeIn{from{opacity:0}to{opacity:1}}.input-field{background:transparent;border:none;border-bottom:2px solid #1a801a;color:#33ff33;font-family:inherit;font-size:1.2rem;padding:5px;text-align:center;outline:none;transition:border-color 0.3s,box-shadow 0.3s,text-shadow 0.3s;width:100%;max-width:400px;letter-spacing:2px}.input-field:focus{border-bottom:2px solid #33ff33;box-shadow:0 4px 6px -1px rgba(51,255,51,0.2);text-shadow:0 0 5px #33ff33}.btn{background:transparent;border:1px solid #1a801a;color:#33ff33;padding:10px 30px;cursor:pointer;font-family:inherit;font-size:1rem;text-transform:uppercase;letter-spacing:3px;transition:all 0.3s;margin-top:20px}.btn:hover{background:#33ff33;color:#000;border-color:#33ff33;box-shadow:0 0 10px #33ff33}pre{font-family:'VT323',monospace;line-height:1.1;font-size:16px;color:#33ff33;text-shadow:0 0 3px #33ff33}.err-msg{color:#ff3333;text-shadow:0 0 5px #ff3333;min-height:24px;margin-top:10px;font-size:0.9rem;opacity:0;transition:opacity 0.3s}.show-err{opacity:1}::selection{background:#33ff33;color:#000}</style></head><body class="crt-flicker flex flex-col min-h-screen"><div class="scanlines"></div><main class="flex-grow flex flex-col items-center justify-center p-6 relative z-10"><section id="stage-0" class="active-stage flex-col items-center text-center max-w-3xl w-full"><pre class="mb-8 select-none">
-      '-.       ,   ,       .-'
-         \    _.-'"'-._    /
-          \  (_).---.(_)  /
-           '-/         \-'
-             \__.---.__/
-             / .'   '. \
-         ,--(_;.-----.;_)--,
-        /   |  \     /  |   \
-       /   /;'-.'._.'.-';\   \
-    ,-'   /, \~ \-=-/ ~/ ,\   '-,
-         ; ;  |~ '.' ~|  ; ;
-         |; '  \=====/  ; ;|
-        /| ; ;_| === |_; ; |\
-       / |  \_/;= = =;\_/  | \
-     _/  | ; ;_ \===/ _; ; |  \_
-    `    |  \_/ ;\=/; \_/  |    `
-         | \_| ; ;|; ; |_/ |
-         ;\_/ ; ;/ \; ; \_/;
-         ;/, ; ; | | ; ; ,\;
-          ; ; ; /   \ ; ; ;
-    iO33  \; ; ;|   |; ; ;/
-           \; ; /   \ ; ;/
-            \_.'     '._/
-     -==3301==-
-</pre><h1 class="text-3xl md:text-5xl mb-6 glitch-text" data-text="Hello.">Hello.</h1><p class="text-lg md:text-xl leading-relaxed mb-6">We are looking for highly intelligent individuals.<br>To find them, we have devised a test.<br><br>There is a hidden narrative within these pages. <br>Find it, and it will lead you on the road to finding us. <br>We look forward to meeting the few that will make it all the way through.</p><p class="text-sm mb-10 italic opacity-80">"The truth is rarely pure and never simple."</p><button onclick="advance(0)" class="btn">Initiate Sequence</button></section><section id="stage-1" class="hidden-stage flex-col items-center text-center max-w-3xl w-full"><h2 class="text-2xl mb-4 tracking-[0.3em]">STAGE I: THE FOUNDATION</h2><div class="text-left w-full bg-black p-6 border border-[#1a801a] mb-8 rounded shadow-2xl shadow-[#00ff001a]"><p class="mb-4">The raw elements of data are often disguised. To the untrained eye, a string of seemingly random characters means nothing. But to those who understand the architecture of the web, it is the first gate.</p><p class="mb-4">Sixty-four symbols form the basis of this transition. Decode the intent.</p><div class="p-4 bg-[#0a200a] border border-[#33ff33] text-center font-mono text-xl tracking-widest break-all">ZW5saWdodGVubWVudA==</div><p class="mt-4 text-xs italic opacity-70">Hint: Consider the padding at the end. What encoding requires equal signs?</p></div><input type="text" id="input-1" class="input-field" placeholder="Enter solution" autocomplete="off" spellcheck="false"><div id="err-1" class="err-msg">INCORRECT KEY.</div><button onclick="verify(1,'ZW5saWdodGVubWVudA==')" class="btn">Submit</button></section><section id="stage-2" class="hidden-stage flex-col items-center text-center max-w-3xl w-full"><h2 class="text-2xl mb-4 tracking-[0.3em]">STAGE II: THE SHIFT</h2><div class="text-left w-full bg-black p-6 border border-[#1a801a] mb-8 rounded shadow-2xl shadow-[#00ff001a]"><p class="mb-4">You have achieved clarity, but history demands respect. The emperors of old communicated through shifted perspectives. Sometimes, to move forward, one must rotate thirteen steps along the path.</p><p class="mb-4 text-center">What is the nature of this journey?</p><div class="p-4 bg-[#0a200a] border border-[#33ff33] text-center font-mono text-xl tracking-widest break-all">cvytevzntr</div><p class="mt-4 text-xs italic opacity-70">Hint: A to N, B to O. The Romans knew the way.</p></div><input type="text" id="input-2" class="input-field" placeholder="Enter solution" autocomplete="off" spellcheck="false"><div id="err-2" class="err-msg">INCORRECT KEY.</div><button onclick="verify(2,'cGlsZ3JpbWFnZQ==')" class="btn">Submit</button></section><section id="stage-3" class="hidden-stage flex-col items-center text-center max-w-3xl w-full"><h2 class="text-2xl mb-4 tracking-[0.3em]">STAGE III: MACHINE WHISPERS</h2><div class="text-left w-full bg-black p-6 border border-[#1a801a] mb-8 rounded shadow-2xl shadow-[#00ff001a]"><pre class="text-center mb-4 opacity-70">
- 01001000 01101001 01100100 01100101
-</pre><p class="mb-4">The human language is fraught with ambiguity. The machine prefers absolutes. Base sixteen is the bridge between binary thought and human comprehension. Find the final key embedded in the fabric of memory addresses.</p><div class="p-4 bg-[#0a200a] border border-[#33ff33] text-center font-mono text-xl tracking-widest break-words space-x-1">74 72 61 6e 73 63 65 6e 64 65 6e 63 65</div><p class="mt-4 text-xs italic opacity-70">Hint: Convert these byte pairs into ASCII characters.</p></div><input type="text" id="input-3" class="input-field" placeholder="Enter solution" autocomplete="off" spellcheck="false"><div id="err-3" class="err-msg">INCORRECT KEY.</div><button onclick="verify(3,'dHJhbnNjZW5kZW5jZQ==')" class="btn">Submit</button></section><section id="stage-4" class="hidden-stage flex-col items-center text-center max-w-3xl w-full"><pre class="mb-8 select-none">
-      '-.       ,   ,       .-'
-         \    _.-'"'-._    /
-          \  (_).---.(_)  /
-           '-/         \-'
-             \__.---.__/
-             / .'   '. \
-         ,--(_;.-----.;_)--,
-        /   |  \     /  |   \
-       /   /;'-.'._.'.-';\   \
-    ,-'   /, \~ \-=-/ ~/ ,\   '-,
-         ; ;  |~ '.' ~|  ; ;
-         |; '  \=====/  ; ;|
-        /| ; ;_| === |_; ; |\
-       / |  \_/;= = =;\_/  | \
-     _/  | ; ;_ \===/ _; ; |  \_
-    `    |  \_/ ;\=/; \_/  |    `
-         | \_| ; ;|; ; |_/ |
-         ;\_/ ; ;/ \; ; \_/;
-         ;/, ; ; | | ; ; ,\;
-          ; ; ; /   \ ; ; ;
-    iO33  \; ; ;|   |; ; ;/
-           \; ; /   \ ; ;/
-            \_.'     '._/
-     -==3301==-
-</pre><h1 class="text-4xl md:text-6xl mb-6 glitch-text text-white" data-text="EPIPHANY" style="color:#fff;text-shadow:0 0 10px #fff">EPIPHANY</h1><div class="text-left w-full bg-[#051105] p-8 border border-[#33ff33] mb-8 rounded shadow-2xl shadow-[#00ff0033]"><p class="text-xl leading-relaxed mb-6">You have demonstrated the capacity to see beyond the surface. <br>You understand encoding, historical ciphers, and digital fundamentals.<br><br>But this is merely the proving ground. The true labyrinth lies elsewhere.<br>Keep your eyes open. The cicada emerges when the prime numbers align.</p><p class="text-sm font-mono opacity-80">END OF TRANSMISSION. <br>LOG HASH: 0x9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08</p></div><p class="text-xs opacity-60">The journey concludes here... for now.</p></section></main><footer class="text-center p-4 text-xs font-mono z-10 relative opacity-60"><p>Seek. Observe. Transmute.</p></footer><script>let currentStage=0;function advance(fromStage){const currentEl=document.getElementById(`stage-${fromStage}`);const nextEl=document.getElementById(`stage-${fromStage+1}`);if(currentEl&&nextEl){currentEl.style.opacity=0;setTimeout(()=>{currentEl.classList.remove('active-stage');currentEl.classList.add('hidden-stage');nextEl.classList.remove('hidden-stage');nextEl.classList.add('active-stage');const inputField=document.getElementById(`input-${fromStage+1}`);if(inputField){inputField.focus();}},1000);}}function verify(stageNumber,expectedB64){const inputEl=document.getElementById(`input-${stageNumber}`);const errEl=document.getElementById(`err-${stageNumber}`);const userVal=inputEl.value.trim().toLowerCase();try{if(btoa(userVal)===expectedB64){errEl.classList.remove('show-err');document.body.style.animation="none";document.body.style.backgroundColor="#33ff33";document.body.style.color="#000";setTimeout(()=>{document.body.style.backgroundColor="#000000";document.body.style.color="#33ff33";document.body.style.animation="flicker 0.15s infinite";advance(stageNumber);},200);}else{showError(errEl);}}catch(e){showError(errEl);}}function showError(el){el.classList.add('show-err');setTimeout(()=>{el.classList.remove('show-err');},3000);}document.addEventListener('DOMContentLoaded',()=>{[1,2,3].forEach(stage=>{const input=document.getElementById(`input-${stage}`);if(input){input.addEventListener('keypress',function(e){if(e.key==='Enter'){e.preventDefault();this.parentElement.querySelector('button').click();}});}});});</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3301 - Seek The Path</title>
+    <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHBhdGggZmlsbD0iIzAwZmYwMCIgZD0iTTE2IDIgTDEyIDEwIEwxMiAyNCBMMTYgMzAgTDIwIDI0IEwyMCAxMCBaIi8+PHBhdGggZmlsbD0iIzAwZmYwMCIgZmlsbC1vcGFjaXR5PSIwLjYiIGQ9Ik0xNCA4IEwyIDE4IEw2IDI2IEwxMiAxNiBaIi8+PHBhdGggZmlsbD0iIzAwZmYwMCIgZmlsbC1vcGFjaXR5PSIwLjYiIGQ9Ik0xOCA4IEwzMCAxOCBMMjYgMjYgTDIwIDE2IFoiLz48Y2lyY2xlIGN4PSIxMyIgY3k9IjYiIHI9IjEuNSIgZmlsbD0iIzAwZmYwMCIvPjxjaXJjbGUgY3g9IjE5IiBjeT0iNiIgcj0iMS41IiBmaWxsPSIjMDBmZjAwIi8+PC9zdmc+" type="image/svg+xml">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=VT323&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #000000; color: #33ff33; font-family: 'Courier Prime', monospace; overflow-x: hidden; margin: 0; padding: 0; }
+        .scanlines { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0) 50%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.1)); background-size: 100% 4px; pointer-events: none; z-index: 50; opacity: 0.6; }
+        .crt-flicker { animation: flicker 0.15s infinite; }
+        @keyframes flicker { 0% { opacity: 0.95; } 50% { opacity: 0.85; } 100% { opacity: 0.95; } }
+        .glitch-text { position: relative; display: inline-block; }
+        .glitch-text::before, .glitch-text::after { content: attr(data-text); position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.8; }
+        .glitch-text::before { left: 2px; text-shadow: -1px 0 red; animation: glitch-anim-1 2s infinite linear alternate-reverse; }
+        .glitch-text::after { left: -2px; text-shadow: -1px 0 blue; animation: glitch-anim-2 3s infinite linear alternate-reverse; }
+        @keyframes glitch-anim-1 { 0% { clip-path: inset(20% 0 80% 0); } 20% { clip-path: inset(60% 0 10% 0); } 40% { clip-path: inset(40% 0 50% 0); } 60% { clip-path: inset(80% 0 5% 0); } 80% { clip-path: inset(10% 0 70% 0); } 100% { clip-path: inset(30% 0 20% 0); } }
+        @keyframes glitch-anim-2 { 0% { clip-path: inset(10% 0 60% 0); } 20% { clip-path: inset(80% 0 5% 0); } 40% { clip-path: inset(30% 0 20% 0); } 60% { clip-path: inset(70% 0 10% 0); } 80% { clip-path: inset(20% 0 50% 0); } 100% { clip-path: inset(50% 0 30% 0); } }
+        .hidden-stage { display: none; opacity: 0; transition: opacity 1s ease-in-out; }
+        .active-stage { display: flex; opacity: 1; animation: fadeIn 2s forwards; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .input-field { background: transparent; border: none; border-bottom: 2px solid #1a801a; color: #33ff33; font-family: inherit; font-size: 1.2rem; padding: 5px; text-align: center; outline: none; transition: border-color 0.3s, box-shadow 0.3s, text-shadow 0.3s; width: 100%; max-width: 400px; letter-spacing: 2px; }
+        .input-field:focus { border-bottom: 2px solid #33ff33; box-shadow: 0 4px 6px -1px rgba(51, 255, 51, 0.2); text-shadow: 0 0 5px #33ff33; }
+        .btn { background: transparent; border: 1px solid #1a801a; color: #33ff33; padding: 10px 30px; cursor: pointer; font-family: inherit; font-size: 1rem; text-transform: uppercase; letter-spacing: 3px; transition: all 0.3s; margin-top: 20px; }
+        .btn:hover { background: #33ff33; color: #000; border-color: #33ff33; box-shadow: 0 0 10px #33ff33; }
+        pre { font-family: 'VT323', monospace; line-height: 1.1; font-size: 16px; color: #33ff33; text-shadow: 0 0 3px #33ff33; }
+        .err-msg { color: #ff3333; text-shadow: 0 0 5px #ff3333; min-height: 24px; margin-top: 10px; font-size: 0.9rem; opacity: 0; transition: opacity 0.3s; }
+        .show-err { opacity: 1; }
+        ::selection { background: #33ff33; color: #000; }
+    </style>
+</head>
+<body class="crt-flicker flex flex-col min-h-screen">
+<!-- 
+[SEEKER'S LEDGER - HINTS FOR THE PERCEPTIVE]
+S01: Padding reveals the 64.
+S02: Romans rotate by 13.
+S03: Base 16 into ASCII.
+S04: Vigenere Key = A 4-letter insect drawn to the flame.
+S05: Listen to the telegraph.
+S06: Fold the alphabet. Z becomes A, Y becomes B.
+S07: Grid of antiquity, 5x5. I and J share a cell.
+S08: Sir Francis hid binary in plain sight.
+S09: Look at your hands on the keys. Shift right.
+S10: Base64's smaller cousin (32).
+S11: Alphabetical index. A=1, Z=26.
+S12: 2, 3, 5, 7, 11, 13... Keep only the primes.
+S13: An esoteric array of memory (Brainfuck).
+S14: Nakamoto's alphabet (Base58).
+S15: Read downwards, pillar by pillar.
+S16: Raw 1s and 0s (ASCII Binary).
+S17: The Emperor steps forward by 5.
+S18: Base 8 arithmetic (Octal).
+S19: Hexadecimal viewed in a mirror.
+S20: SHA-1 hash of a 3-letter word for 'self'.
+-->
+<div class="scanlines"></div>
+<main class="flex-grow flex flex-col items-center justify-center p-6 relative z-10">
 
-```
+    <!-- STAGE 0 -->
+    <section id="stage-0" class="active-stage flex-col items-center text-center max-w-3xl w-full">
+<pre class="mb-8 select-none">
+      '-.       ,   ,       .-'
+         \    _.-'"'-._    /
+          \  (_).---.(_)  /
+           '-/         \-'
+             \__.---.__/
+             / .'   '. \
+         ,--(_;.-----.;_)--,
+        /   |  \     /  |   \
+       /   /;'-.'._.'.-';\   \
+    ,-'   /, \~ \-=-/ ~/ ,\   '-,
+         ; ;  |~ '.' ~|  ; ;
+         |; '  \=====/  ; ;|
+        /| ; ;_| === |_; ; |\
+       / |  \_/;= = =;\_/  | \
+     _/  | ; ;_ \===/ _; ; |  \_
+    `    |  \_/ ;\=/; \_/  |    `
+         | \_| ; ;|; ; |_/ |
+         ;\_/ ; ;/ \; ; \_/;
+         ;/, ; ; | | ; ; ,\;
+          ; ; ; /   \ ; ; ;
+    iO33  \; ; ;|   |; ; ;/
+           \; ; /   \ ; ;/
+            \_.'     '._/
+     -==3301==-
+</pre>
+        <h1 class="text-3xl md:text-5xl mb-6 glitch-text" data-text="Hello.">Hello.</h1>
+        <p class="text-lg md:text-xl leading-relaxed mb-6">
+            We are looking for highly intelligent individuals.<br>To find them, we have devised a test.<br><br>
+            There is a hidden narrative within these pages.<br>Find it, and it will lead you on the road to finding us.<br>
+            We look forward to meeting the few that will make it all the way through.
+        </p>
+        <p class="text-sm mb-10 italic opacity-80">"The truth is rarely pure and never simple."</p>
+        <button class="btn init-btn">Initiate Sequence</button>
+    </section>
+
+    <!-- STAGE 1 (enlightenment) -->
+    <section id="stage-1" class="hidden-stage flex-col items-center text-center max-w-3xl w-full">
+        <h2 class="text-2xl mb-4 tracking-[0.3em]">STAGE I: THE FOUNDATION</h2>
+        <div class="text-left w-full bg-black p-6 border border-[#1a801a] mb-8 rounded shadow-2xl shadow-[#00ff001a]">
+            <p class="mb-4">Sixty-four symbols form the basis of this transition. Decode the intent.</p>
+            <div class="p-4 bg-[#0a200a] border border-[#33ff33] text-center font-mono text-xl tracking-widest break-all">ZW5saWdodGVubWVudA==</div>
+        </div>
+        <input type="text" id="input-1" data-target="33306fa0df67f3944358bbd7f28ed58b688d0111a49c951da603b5d275deccfa" class="input-field" placeholder="Enter solution" autocomplete="off" spellcheck="false">
+        <div id="err-1" class="err-msg">INCORRECT KEY.</div>
+        <button class="btn submit-btn" data-stage="1">Submit</button>
+    </section>
+
+    <!-- STAGE 2 (pilgrimage) -->
+    <section id="stage-2" class="hidden-stage flex-col items-center text-center max-w-3xl w-full">
+        <h2 class="text-2xl mb-4 tracking-[0.3em]">STAGE II: THE SHIFT</h2>
+        <div class="text-left w-full bg-black p-6 border border-[#1a801a] mb-8 rounded shadow-2xl shadow-[#00ff001a]">
+            <p class="mb-4">The emperors of old communicated through shifted perspectives. What is the nature of this journey?</p>
+            <div class="p-4 bg-[#0a200a] border border-[#33ff33] text-center font-mono text-xl tracking-widest break-all">cvytevzntr</div>
+        </div>
+        <input type="text" id="input-2" data-target="cc40d3a58d60efd4ed9a60e0a5cc93bf40974b88a916892694b4344078873738" class="input-field" placeholder="Enter solution" autocomplete="off" spellcheck="false">
+        <div id="err-2" class="err-msg">INCORRECT KEY.</div>
+        <button class="btn submit-btn" data-stage="2">Submit</button>
+    </section>
+
+    <!-- STAGE 3 (transcendence) -->
+    <section id="stage-3" class="hidden-stage flex-col items-center text-center max-w-3xl w-full">
+        <h2 class="text-2xl mb-4 tracking-[0.3em]">STAGE III: MACHINE WHISPERS</h2>
+        <div class="text-left w-full bg-black p-6 border border-[#1a801a] mb-8 rounded shadow-2xl shadow-[#00ff001a]">
+            <p class="mb-4">Base sixteen is the bridge between binary thought and human comprehension.</p>
+            <div class="p-4 bg-[#0a200a] border border-[#33ff33] text-center font-mono text-xl tracking-widest break-words space-x-1">74 72 61 6e 73 63 65 6e 64 65 6e 63 65</div>
+        </div>
+        <input type="text" id="input-3" data-target="21dfb3986a43f8e5f6eec6a917bd994c9217b9b1e9564177d6ee32c86ebf0103" class="input-field" placeholder="Enter solution" autocomplete="off" spellcheck="false">
+        <div id="err-3" class="err-msg">INCORRECT KEY.</div>
+        <button class="btn submit-btn" data-stage="3">Submit</button>
+    </section>
+
+    <!-- STAGE 4 (observe) -->
+    <section id="stage-4" class="hidden-stage flex-col items-center text-center max-w-3xl w-full">
+        <h2 class="text-2xl mb-4 tracking-[0.3em]">STAGE IV: THE FLAME</h2>
+        <div class="text-left w-full bg-black p-6 border border-[#1a801a] mb-8 rounded shadow-2xl shadow-[#00ff001a]">
+            <p class="mb-4">A polyalphabetic cipher from the 16th century.</p>
+            <div class="p-4 bg-[#0a200a] border border-[#33ff33] text-center font-mono text-xl tracking-widest break-words space-x-1">APLLDJX</div>
+        </div>
+        <input type="text" id="input-4" data-target="75fc603a1d95393c5d6e24dbcf6933c0fffa654784db4b6697b0561da75bfab5" class="input-field" placeholder="Enter solution" autocomplete="off" spellcheck="false">
+        <div id="err-4" class="err-msg">INCORRECT KEY.</div>
+        <button class="btn submit-btn" data-stage="4">Submit</button>
+    </section>
+
+    <!-- STAGE 5 (believe) -->
+    <section id="stage-5" class="hidden-stage flex-col items-center text-center max-w-3xl w-full">
+        <h2 class="text-2xl mb-4 tracking-[0.3em]">STAGE V: THE PULSE</h2>
+        <div class="text-left w-full bg-black p-6 border border-[#1a801a] mb-8 rounded shadow-2xl shadow-[#00ff001a]">
+            <div class="p-4 bg-[#0a200a] border border-[#33ff33] text-center font-mono text-xl tracking-widest break-words space-x-1">-... . .-.. .. . ...- .</div>
+        </div>
+        <input type="text" id="input-5" data-target="cb272a249c1ff04c1064db136694dc5066dbed418a09f8749e7289f81fc76a91" class="input-field" placeholder="Enter solution" autocomplete="off" spellcheck="false">
+        <div id="err-5" class="err-msg">INCORRECT KEY.</div>
+        <button class="btn submit-btn" data-stage="5">Submit</button>
+    </section>
+
+    <!-- STAGE 6 (awaken) -->
+    <section id="stage-6" class="hidden-stage flex-col items-center text-center max-w-3xl w-full">
+        <h2 class="text-2xl mb-4 tracking-[0.3em]">STAGE VI: THE MIRROR</h2>
+        <div class="text-left w-full bg-black p-6 border border-[#1a801a] mb-8 rounded shadow-2xl shadow-[#00ff001a]">
+            <div class="p-4 bg-[#0a200a] border border-[#33ff33] text-center font-mono text-xl tracking-widest break-words space-x-1">zdzpvm</div>
+        </div>
+        <input type="text" id="input-6" data-target="5dae7b99c0b1bbcbff2b12384a2228ba1c3f9a72175de870d05646f905fb794c" class="input-field" placeholder="Enter solution" autocomplete="off" spellcheck="false">
+        <div id="err-6" class="err-msg">INCORRECT KEY.</div>
+        <button class="btn submit-btn" data-stage="6">Submit</button>
+    </section>
+
+    <!-- STAGE 7 (solitude) -->
+    <section id="stage-7" class="hidden-stage flex-col items-center text-center max-w-3xl w-full">
+        <h2 class="text-2xl mb-4 tracking-[0.3em]">STAGE VII: THE GRID</h2>
+        <div class="text-left w-full bg-black p-6 border border-[#1a801a] mb-8 rounded shadow-2xl shadow-[#00ff001a]">
+            <div class="p-4 bg-[#0a200a] border border-[#33ff33] text-center font-mono text-xl tracking-widest break-words space-x-1">43 34 31 24 44 45 14 15</div>
+        </div>
+        <input type="text" id="input-7" data-target="38d706f3630f9a56ce3000da44ed810f545041ff958ab4e339170e5b7b998cfb" class="input-field" placeholder="Enter solution" autocomplete="off" spellcheck="false">
+        <div id="err-7" class="err-msg">INCORRECT KEY.</div>
+        <button class="btn submit-btn" data-stage="7">Submit</button>
+    </section>
+
+    <!-- STAGE 8 (truth) -->
+    <section id="stage-8" class="hidden-stage flex-col items-center text-center max-w-3xl w-full">
+        <h2 class="text-2xl mb-4 tracking-[0.3em]">STAGE VIII: THE KNIGHT</h2>
+        <div class="text-left w-full bg-black p-6 border border-[#1a801a] mb-8 rounded shadow-2xl shadow-[#00ff001a]">
+            <div class="p-4 bg-[#0a200a] border border-[#33ff33] text-center font-mono text-xl tracking-widest break-words space-x-1">BAABB BAAAA BAABB BAABB AABBB</div>
+        </div>
+        <input type="text" id="input-8" data-target="fc29b71e1b1d441113b28b75eeb10e9f1a269be432f7a93cebf29a736a536e29" class="input-field" placeholder="Enter solution" autocomplete="off" spellcheck="false">
+        <div id="err-8" class="err-msg">INCORRECT KEY.</div>
+        <button class="btn submit-btn" data-stage="8">Submit</button>
+    </section>
+
+    <!-- STAGE 9 (sequence) -->
+    <section id="stage-9" class="hidden-stage flex-col items-center text-center max-w-3xl w-full">
+        <h2 class="text-2xl mb-4 tracking-[0.3em]">STAGE IX: THE BOARD</h2>
+        <div class="text-left w-full bg-black p-6 border border-[#1a801a] mb-8 rounded shadow-2xl shadow-[#00ff001a]">
+            <div class="p-4 bg-[#0a200a] border border-[#33ff33] text-center font-mono text-xl tracking-widest break-words space-x-1">drwirmvr</div>
+        </div>
+        <input type="text" id="input-9" data-target="7fb488f2ce542b23a593fb8cbcc1baefde0380c592dae41bf8cd3d84a7e44ce1" class="input-field" placeholder="Enter solution" autocomplete="off" spellcheck="false">
+        <div id="err-9" class="err-msg">INCORRECT KEY.</div>
+        <button class="btn submit-btn" data-stage="9">Submit</button>
+    </section>
+
+    <!-- STAGE 10 (illusion) -->
+    <section id="stage-10" class="hidden-stage flex-col items-center text-center max-w-3xl w-full">
+        <h2 class="text-2xl mb-4 tracking-[0.3em]">STAGE X: THE TRUNCATION</h2>
+        <div class="text-left w-full bg-black p-6 border border-[#1a801a] mb-8 rounded shadow-2xl shadow-[#00ff001a]">
+            <div class="p-4 bg-[#0a200a] border border-[#33ff33] text-center font-mono text-xl tracking-widest break-words space-x-1">NFSXG5DPO5XQ====</div>
+        </div>
+        <input type="text" id="input-10" data-target="d1421ddce590eb7703db5d5f22fc8e7e17cb834fde9cf6c4c02da8cc38944517" class="input-field" placeholder="Enter solution" autocomplete="off" spellcheck="false">
+        <div id="err-10" class="err-msg">INCORRECT KEY.</div>
+        <button class="btn submit-btn" data-stage="10">Submit</button>
+    </section>
+
+    <!-- STAGE 11 (emerge) -->
+    <section id="stage-11" class="hidden-stage flex-col items-center text-center max-w-3xl w-full">
+        <h2 class="text-2xl mb-4 tracking-[0.3em]">STAGE XI: THE INDEX</h2>
+        <div class="text-left w-full bg-black p-6 border border-[#1a801a] mb-8 rounded shadow-2xl shadow-[#00ff001a]">
+            <div class="p-4 bg-[#0a200a] border border-[#33ff33] text-center font-mono text-xl tracking-widest break-words space-x-1">5-13-5-18-7-5</div>
+        </div>
+        <input type="text" id="input-11" data-target="193d5fdf190f8ce910ef87a41ec5e96645367fc96fb2c317ccb9f7a917bd9c72" class="input-field" placeholder="Enter solution" autocomplete="off" spellcheck="false">
+        <div id="err-11" class="err-msg">INCORRECT KEY.</div>
+        <button class="btn submit-btn" data-stage="11">Submit</button>
+    </section>
+
+    <!-- STAGE 12 (divine) -->
+    <section id="stage-12" class="hidden-stage flex-col items-center text-center max-w-3xl w-full">
+        <h2 class="text-2xl mb-4 tracking-[0.3em]">STAGE XII: THE INDIVISIBLE</h2>
+        <div class="text-left w-full bg-black p-6 border border-[#1a801a] mb-8 rounded shadow-2xl shadow-[#00ff001a]">
+            <div class="p-4 bg-[#0a200a] border border-[#33ff33] text-center font-mono text-xl tracking-widest break-words space-x-1">a d i a v z e a a a n a e</div>
+        </div>
+        <input type="text" id="input-12" data-target="7b973950c4bb7c191aeb6cde366bf9b20757ee9fba9fc8b560a6a23b9d885a54" class="input-field" placeholder="Enter solution" autocomplete="off" spellcheck="false">
+        <div id="err-12" class="err-msg">INCORRECT KEY.</div>
+        <button class="btn submit-btn" data-stage="12">Submit</button>
+    </section>
+
+    <!-- STAGE 13 (void) -->
+    <section id="stage-13" class="hidden-stage flex-col items-center text-center max-w-3xl w-full">
+        <h2 class="text-2xl mb-4 tracking-[0.3em]">STAGE XIII: THE ESOTERIC</h2>
+        <div class="text-left w-full bg-black p-6 border border-[#1a801a] mb-8 rounded shadow-2xl shadow-[#00ff001a]">
+            <div class="p-4 bg-[#0a200a] border border-[#33ff33] text-center font-mono text-xl tracking-widest break-words space-x-1">+++++ +++++ [>+>+++>++++>+++++++&lt;&lt;&lt;&lt;-] >++ . >+ . >+++++ . > .</div>
+        </div>
+        <input type="text" id="input-13" data-target="a54bd2a0a20e2ef5b6d5f7de2d3856b3e34b12dce30c1be0e5fec0dcdfd7889e" class="input-field" placeholder="Enter solution" autocomplete="off" spellcheck="false">
+        <div id="err-13" class="err-msg">INCORRECT KEY.</div>
+        <button class="btn submit-btn" data-stage="13">Submit</button>
+    </section>
+
+    <!-- STAGE 14 (genesis) -->
+    <section id="stage-14" class="hidden-stage flex-col items-center text-center max-w-3xl w-full">
+        <h2 class="text-2xl mb-4 tracking-[0.3em]">STAGE XIV: THE GENESIS</h2>
+        <div class="text-left w-full bg-black p-6 border border-[#1a801a] mb-8 rounded shadow-2xl shadow-[#00ff001a]">
+            <div class="p-4 bg-[#0a200a] border border-[#33ff33] text-center font-mono text-xl tracking-widest break-words space-x-1">3zVqX</div>
+        </div>
+        <input type="text" id="input-14" data-target="cc8a044ceb95df4a781b0f55cf55bd38dbdffdb0be712f24ef78065095e263ab" class="input-field" placeholder="Enter solution" autocomplete="off" spellcheck="false">
+        <div id="err-14" class="err-msg">INCORRECT KEY.</div>
+        <button class="btn submit-btn" data-stage="14">Submit</button>
+    </section>
+
+    <!-- STAGE 15 (eternity) -->
+    <section id="stage-15" class="hidden-stage flex-col items-center text-center max-w-3xl w-full">
+        <h2 class="text-2xl mb-4 tracking-[0.3em]">STAGE XV: THE PILLAR</h2>
+        <div class="text-left w-full bg-black p-6 border border-[#1a801a] mb-8 rounded shadow-2xl shadow-[#00ff001a]">
+            <div class="p-4 bg-[#0a200a] border border-[#33ff33] text-center font-mono text-xl tracking-widest break-words space-x-4"><span>e m r e</span><br><span>i n t t</span><br><span>y t y i</span></div>
+        </div>
+        <input type="text" id="input-15" data-target="34ed9211fbbe3cfa3ef0a221295fc7bf2b07e7b686259074ee2dbb9e59ed141f" class="input-field" placeholder="Enter solution" autocomplete="off" spellcheck="false">
+        <div id="err-15" class="err-msg">INCORRECT KEY.</div>
+        <button class="btn submit-btn" data-stage="15">Submit</button>
+    </section>
+
+    <!-- STAGE 16 (system) -->
+    <section id="stage-16" class="hidden-stage flex-col items-center text-center max-w-3xl w-full">
+        <h2 class="text-2xl mb-4 tracking-[0.3em]">STAGE XVI: THE STREAM</h2>
+        <div class="text-left w-full bg-black p-6 border border-[#1a801a] mb-8 rounded shadow-2xl shadow-[#00ff001a]">
+            <div class="p-4 bg-[#0a200a] border border-[#33ff33] text-center font-mono text-xl tracking-widest break-all">011100110111100101110011011101000110010101101101</div>
+        </div>
+        <input type="text" id="input-16" data-target="683c3e8006dcb650630b15e4f48b9f0f9bde281f6d92efaf69930f730cddf4df" class="input-field" placeholder="Enter solution" autocomplete="off" spellcheck="false">
+        <div id="err-16" class="err-msg">INCORRECT KEY.</div>
+        <button class="btn submit-btn" data-stage="16">Submit</button>
+    </section>
+
+    <!-- STAGE 17 (matrix) -->
+    <section id="stage-17" class="hidden-stage flex-col items-center text-center max-w-3xl w-full">
+        <h2 class="text-2xl mb-4 tracking-[0.3em]">STAGE XVII: THE EMPEROR</h2>
+        <div class="text-left w-full bg-black p-6 border border-[#1a801a] mb-8 rounded shadow-2xl shadow-[#00ff001a]">
+            <div class="p-4 bg-[#0a200a] border border-[#33ff33] text-center font-mono text-xl tracking-widest break-words space-x-1">rfywnc</div>
+        </div>
+        <input type="text" id="input-17" data-target="1bfcd164627dc4bcf84ec16b539c36ba8b31a896a2e4b3da59a0f4db239f60ba" class="input-field" placeholder="Enter solution" autocomplete="off" spellcheck="false">
+        <div id="err-17" class="err-msg">INCORRECT KEY.</div>
+        <button class="btn submit-btn" data-stage="17">Submit</button>
+    </section>
+
+    <!-- STAGE 18 (machine) -->
+    <section id="stage-18" class="hidden-stage flex-col items-center text-center max-w-3xl w-full">
+        <h2 class="text-2xl mb-4 tracking-[0.3em]">STAGE XVIII: THE ARACHNID</h2>
+        <div class="text-left w-full bg-black p-6 border border-[#1a801a] mb-8 rounded shadow-2xl shadow-[#00ff001a]">
+            <div class="p-4 bg-[#0a200a] border border-[#33ff33] text-center font-mono text-xl tracking-widest break-words space-x-1">155 141 143 150 151 156 145</div>
+        </div>
+        <input type="text" id="input-18" data-target="5d9df96767677d27e997a66cce42813cbef783bd8dcde5c907a783da89ec8d01" class="input-field" placeholder="Enter solution" autocomplete="off" spellcheck="false">
+        <div id="err-18" class="err-msg">INCORRECT KEY.</div>
+        <button class="btn submit-btn" data-stage="18">Submit</button>
+    </section>
+
+    <!-- STAGE 19 (cipher) -->
+    <section id="stage-19" class="hidden-stage flex-col items-center text-center max-w-3xl w-full">
+        <h2 class="text-2xl mb-4 tracking-[0.3em]">STAGE XIX: THE REFLECTION</h2>
+        <div class="text-left w-full bg-black p-6 border border-[#1a801a] mb-8 rounded shadow-2xl shadow-[#00ff001a]">
+            <div class="p-4 bg-[#0a200a] border border-[#33ff33] text-center font-mono text-xl tracking-widest break-words space-x-1">72 65 68 70 69 63</div>
+        </div>
+        <input type="text" id="input-19" data-target="ccf8d34346766cd59a0c102bdc17b5e82a85703f2d22b27a3c3e6604cc79fb60" class="input-field" placeholder="Enter solution" autocomplete="off" spellcheck="false">
+        <div id="err-19" class="err-msg">INCORRECT KEY.</div>
+        <button class="btn submit-btn" data-stage="19">Submit</button>
+    </section>
+
+    <!-- STAGE 20 (ego) -->
+    <section id="stage-20" class="hidden-stage flex-col items-center text-center max-w-3xl w-full">
+        <h2 class="text-2xl mb-4 tracking-[0.3em]">STAGE XX: THE HASH</h2>
+        <div class="text-left w-full bg-black p-6 border border-[#1a801a] mb-8 rounded shadow-2xl shadow-[#00ff001a]">
+            <div class="p-4 bg-[#0a200a] border border-[#33ff33] text-center font-mono text-xl tracking-widest break-words space-x-1">8b1a9953c4611296a827abf8c47804d7e6c49c6b</div>
+        </div>
+        <input type="text" id="input-20" data-target="ca43bb2228f411b06876c12d48c823078a3a0eecb93c8366c3a101f3f619bfae" class="input-field" placeholder="Enter solution" autocomplete="off" spellcheck="false">
+        <div id="err-20" class="err-msg">INCORRECT KEY.</div>
+        <button class="btn submit-btn" data-stage="20">Submit</button>
+    </section>
+
+    <!-- STAGE 21 (Conclusion) -->
+    <section id="stage-21" class="hidden-stage flex-col items-center text-center max-w-3xl w-full">
+<pre class="mb-8 select-none">
+      '-.       ,   ,       .-'
+         \    _.-'"'-._    /
+          \  (_).---.(_)  /
+           '-/         \-'
+             \__.---.__/
+             / .'   '. \
+         ,--(_;.-----.;_)--,
+        /   |  \     /  |   \
+       /   /;'-.'._.'.-';\   \
+    ,-'   /, \~ \-=-/ ~/ ,\   '-,
+         ; ;  |~ '.' ~|  ; ;
+         |; '  \=====/  ; ;|
+        /| ; ;_| === |_; ; |\
+       / |  \_/;= = =;\_/  | \
+     _/  | ; ;_ \===/ _; ; |  \_
+    `    |  \_/ ;\=/; \_/  |    `
+         | \_| ; ;|; ; |_/ |
+         ;\_/ ; ;/ \; ; \_/;
+         ;/, ; ; | | ; ; ,\;
+          ; ; ; /   \ ; ; ;
+    iO33  \; ; ;|   |; ; ;/
+           \; ; /   \ ; ;/
+            \_.'     '._/
+     -==3301==-
+</pre>
+        <h1 class="text-4xl md:text-6xl mb-6 glitch-text text-white" data-text="EPIPHANY" style="color:#fff;text-shadow:0 0 10px #fff">EPIPHANY</h1>
+        <div class="text-left w-full bg-[#051105] p-8 border border-[#33ff33] mb-8 rounded shadow-2xl shadow-[#00ff0033]">
+            <p class="text-xl leading-relaxed mb-6">
+                You have demonstrated the capacity to see beyond the surface.<br>
+                You have walked the labyrinth of 20 gates.<br><br>
+                But this is merely the proving ground. The true labyrinth lies elsewhere.<br>
+                Keep your eyes open. The cicada emerges when the prime numbers align.
+            </p>
+            <p class="text-sm font-mono opacity-80">
+                END OF TRANSMISSION.<br>
+                LOG HASH: 0x9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08
+            </p>
+        </div>
+        <p class="text-xs opacity-60">The journey concludes here... for now.</p>
+    </section>
+
+</main>
+
+<footer class="text-center p-4 text-xs font-mono z-10 relative opacity-60">
+    <p>Seek. Observe. Transmute.</p>
+</footer>
+
+<script>
+(function() {
+    let currentStage = 0;
+    let audioCtx;
+
+    // Synthesize an unsettling drone using the Web Audio API
+    function startAmbientAudio() {
+        if (audioCtx) return; // Prevent multiple contexts
+        
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        audioCtx = new AudioContext();
+
+        // 1. Primary Low Drone (Sawtooth)
+        const osc1 = audioCtx.createOscillator();
+        osc1.type = 'sawtooth';
+        osc1.frequency.setValueAtTime(43.65, audioCtx.currentTime); // F1 Note
+
+        // 2. Secondary Detuned Drone (Triangle) for dissonance
+        const osc2 = audioCtx.createOscillator();
+        osc2.type = 'triangle';
+        osc2.frequency.setValueAtTime(46.25, audioCtx.currentTime); // F#1 Note
+
+        // 3. Lowpass Filter to muffle the harshness
+        const filter = audioCtx.createBiquadFilter();
+        filter.type = 'lowpass';
+        filter.frequency.setValueAtTime(300, audioCtx.currentTime);
+
+        // 4. Low Frequency Oscillator (LFO) to pulse the filter
+        const lfo = audioCtx.createOscillator();
+        lfo.type = 'sine';
+        lfo.frequency.setValueAtTime(0.15, audioCtx.currentTime); // Pulse speed
+        
+        const lfoGain = audioCtx.createGain();
+        lfoGain.gain.setValueAtTime(150, audioCtx.currentTime); // Pulse depth
+        
+        // 5. Master Gain for volume
+        const masterGain = audioCtx.createGain();
+        masterGain.gain.setValueAtTime(0.12, audioCtx.currentTime); // Subtle volume
+
+        // Connections
+        lfo.connect(lfoGain);
+        lfoGain.connect(filter.frequency);
+
+        osc1.connect(filter);
+        osc2.connect(filter);
+        
+        filter.connect(masterGain);
+        masterGain.connect(audioCtx.destination);
+
+        // Start oscillators
+        osc1.start();
+        osc2.start();
+        lfo.start();
+    }
+
+    function advance(fromStage) {
+        const currentEl = document.getElementById(`stage-${fromStage}`);
+        const nextEl = document.getElementById(`stage-${fromStage + 1}`);
+        
+        if (currentEl && nextEl) {
+            currentEl.style.opacity = 0;
+            setTimeout(() => {
+                currentEl.classList.remove('active-stage');
+                currentEl.classList.add('hidden-stage');
+                nextEl.classList.remove('hidden-stage');
+                nextEl.classList.add('active-stage');
+                
+                const inputField = document.getElementById(`input-${fromStage + 1}`);
+                if (inputField) {
+                    inputField.focus();
+                }
+            }, 1000);
+        }
+    }
+
+    async function hashString(message) {
+        const msgBuffer = new TextEncoder().encode(message);
+        const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+        const hashArray = Array.from(new Uint8Array(hashBuffer));
+        return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+    }
+
+    async function processSubmit(stageNumber) {
+        const inputEl = document.getElementById(`input-${stageNumber}`);
+        const errEl = document.getElementById(`err-${stageNumber}`);
+        const expectedHash = inputEl.getAttribute('data-target');
+        const userVal = inputEl.value.trim().toLowerCase();
+
+        try {
+            const hashedInput = await hashString(userVal);
+            if (hashedInput === expectedHash) {
+                errEl.classList.remove('show-err');
+                document.body.style.animation = "none";
+                document.body.style.backgroundColor = "#33ff33";
+                document.body.style.color = "#000";
+                setTimeout(() => {
+                    document.body.style.backgroundColor = "#000000";
+                    document.body.style.color = "#33ff33";
+                    document.body.style.animation = "flicker 0.15s infinite";
+                    advance(stageNumber);
+                }, 200);
+            } else {
+                showError(errEl);
+            }
+        } catch (e) {
+            showError(errEl);
+        }
+    }
+
+    function showError(el) {
+        el.classList.add('show-err');
+        setTimeout(() => { el.classList.remove('show-err'); }, 3000);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        // Bind the initial advance button AND trigger the audio
+        document.querySelector('.init-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            startAmbientAudio(); // Boots up the synthesizer
+            advance(0);
+        });
+
+        // Bind all stage submit buttons
+        document.querySelectorAll('.submit-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                processSubmit(parseInt(this.getAttribute('data-stage')));
+            });
+        });
+
+        // Bind enter keys for all inputs
+        document.querySelectorAll('.input-field').forEach(input => {
+            input.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    this.parentElement.querySelector('.submit-btn').click();
+                }
+            });
+        });
+    });
+})();
+</script>
+</body>
+</html>
